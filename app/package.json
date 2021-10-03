@@ -1,0 +1,40 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "rm -rf .next && next build",
+    "start": "next start",
+    "lint": "eslint src --format unix",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json} && yarn eslint src --fix"
+  },
+  "dependencies": {
+    "@types/react-gtm-module": "2.0.1",
+    "cheerio": "1.0.0-rc.10",
+    "date-fns": "2.24.0",
+    "date-fns-tz": "1.1.6",
+    "highlight.js": "11.2.0",
+    "microcms-js-sdk": "1.2.0",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-gtm-module": "2.0.11",
+    "react-transition-group": "4.4.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "0.4.1",
+    "@types/react": "17.0.24",
+    "@types/react-transition-group": "4.4.3",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "autoprefixer": "10.3.6",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "8.3.0",
+    "postcss": "8.3.8",
+    "prettier": "2.4.1",
+    "tailwindcss": "2.2.16",
+    "typescript": "4.4.3"
+  }
+}

@@ -1,0 +1,19 @@
+# EXAMPLE USAGE
+# Refer for explanation to following link:
+# https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
+
+pre-commit:
+  piped: true
+  commands:
+    1_format:
+      root: "app/"
+      glob: "*.{js,jsx,ts,tsx}"
+      run: docker-compose run --rm app yarn prettier --write {staged_files} && yarn eslint {staged_files} --fix && git add {staged_files}
+    2_check-types:
+      root: "app/"
+      glob: "*.{js,jsx,ts,tsx}"
+      run: docker-compose run --rm app yarn check-types
+    3_eslint:
+      root: "app/"
+      glob: "*.{js,jsx,ts,tsx}"
+      run: docker-compose run --rm app yarn eslint {staged_files} --format unix --no-color
