@@ -26,9 +26,10 @@ export const getStaticPaths = async () => {
     endpoint: 'blog',
     queries: { fields: 'id', offset: 0, limit: 1 },
   })
-  const paths = range(1, Math.ceil(data.totalCount / appConst.BLOG_PER_PAGE)).map(
-    (i) => `/page/${i}`,
-  )
+  const paths = range(
+    1,
+    Math.ceil(data.totalCount / appConst.BLOG_PER_PAGE),
+  ).map((i) => `/page/${i}`)
   return { paths, fallback: false }
 }
 
